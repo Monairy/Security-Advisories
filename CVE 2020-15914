@@ -1,1 +1,26 @@
-Reserved 
+Severity: Important
+
+CVSS Score: 8.2
+
+Status: Fixed
+
+Affected Software: Origin for Mac & PC version 10.5.86 (or earlier)
+
+CVE ID: CVE-2020-15914
+
+
+Description
+
+A cross-site scripting (XSS) vulnerability exists in the Origin Client that could allow a remote attacker to execute arbitrary Javascript in a target user’s Origin client.
+An attacker could use this vulnerability to access sensitive data related to the target user’s Origin account, or to control or monitor the Origin text chat window.
+
+
+Attack Scenario
+
+To successfully leverage the vulnerability, the attacker must log into the Origin Client using a valid Origin account,
+and use Origin’s text chat functionality to send a specially crafted text chat message to the affected system.
+The crafted message contains a Javascript payload that will execute in the Origin Client, when the client next starts.
+
+If the message is delivered, and the system is not running the Origin Client at that time, the payload will execute when the user next runs the Origin Client.
+If the user is already running the Origin client when the message is delivered, the payload will not execute immediately.
+     The attacker must wait for the user to restart the Origin Client, or otherwise convince the user to restart their Origin Client.
