@@ -24,3 +24,7 @@ The crafted message contains a Javascript payload that will execute in the Origi
 If the message is delivered, and the system is not running the Origin Client at that time, the payload will execute when the user next runs the Origin Client.
 If the user is already running the Origin client when the message is delivered, the payload will not execute immediately.
      The attacker must wait for the user to restart the Origin Client, or otherwise convince the user to restart their Origin Client.
+
+
+References:
+https://www.ea.com/security/news/easec-2020-003-cross-site-scripting-vulnerability-in-origin-client
